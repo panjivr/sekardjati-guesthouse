@@ -6,7 +6,7 @@ export default function WhatsAppFab() {
       href={waLink("Halo Sekar Djati, saya ingin cek ketersediaan kamar.")}
       target="_blank"
       rel="noopener"
-      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-clay text-white shadow-lg transition hover:scale-105 hover:bg-[#a05e3d]"
+      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-forest text-[#25D366] shadow-lg ring-1 ring-gold/40 transition hover:scale-105 hover:bg-plum-900"
       aria-label="Reservasi via WhatsApp"
     >
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden>

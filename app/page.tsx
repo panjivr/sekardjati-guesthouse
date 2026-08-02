@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { rooms, destinations, faqs, site, waLink } from "@/content/site";
+import { destinations, faqs, site, waLink } from "@/content/site";
+import RoomsList from "@/components/RoomsList";
+import Media from "@/components/Media";
 
 const checkCta = waLink(
   "Halo Sekar Djati, saya ingin cek ketersediaan kamar.\n\nTanggal check-in: \nTanggal check-out: \nJumlah tamu: \nTipe kamar yang diminati: "
@@ -41,9 +43,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-forest via-moss to-clay">
-            <div className="absolute inset-0 flex items-end p-8">
-              <p className="font-serif text-2xl text-cream/95">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
+            <Media imageKey="hero" className="absolute inset-0" rounded="rounded-3xl" />
+            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-plum-900/75 via-plum-900/10 to-transparent p-8">
+              <p className="font-serif text-2xl text-cream">
                 Bangun pelan. Sarapan hangat. Lalu pilih jalanmu.
               </p>
             </div>
@@ -102,29 +105,7 @@ export default function Home() {
               Lihat semua kamar →
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {rooms.map((r) => (
-              <div key={r.slug} className="card flex flex-col">
-                <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-moss/70 to-forest" />
-                <h3 className="mt-5 text-xl text-forest">{r.name}</h3>
-                <p className="mt-2 text-sm text-ink/70">{r.promise}</p>
-                <p className="mt-3 text-sm text-moss">
-                  {r.capacity} · {r.bed}
-                </p>
-                <p className="mt-4 text-sm">
-                  Mulai dari{" "}
-                  <span className="font-serif text-lg text-forest">{r.priceFrom}</span>
-                  /malam
-                </p>
-                <Link
-                  href="/kamar"
-                  className="btn-secondary mt-5 self-start"
-                >
-                  Lihat detail
-                </Link>
-              </div>
-            ))}
-          </div>
+          <RoomsList variant="featured" />
         </div>
       </section>
 
@@ -146,16 +127,9 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {["Nasi Goreng Wong Puncak", "Ayam Sambal Bawang", "Kopi Susu Gula Aren", "Pisang Goreng"].map(
-              (m) => (
-                <div
-                  key={m}
-                  className="rounded-2xl bg-white/10 p-5 text-sm font-medium text-cream"
-                >
-                  {m}
-                </div>
-              )
-            )}
+            {["wp-1", "wp-2", "wp-3", "wp-4"].map((k) => (
+              <Media key={k} imageKey={k} className="aspect-square" />
+            ))}
           </div>
         </div>
       </section>

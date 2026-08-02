@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import Media from "@/components/Media";
 
 export const metadata: Metadata = {
   title: "Galeri",
@@ -8,13 +9,13 @@ export const metadata: Metadata = {
 };
 
 const tiles = [
-  { label: "Eksterior pagi", span: "sm:col-span-2 sm:row-span-2", from: "from-forest", to: "to-moss" },
-  { label: "Kamar Djati", span: "", from: "from-moss", to: "to-forest" },
-  { label: "WP Wong Puncak", span: "", from: "from-clay", to: "to-forest" },
-  { label: "Telaga Ngebel", span: "sm:col-span-2", from: "from-forest", to: "to-clay" },
-  { label: "Detail sarapan", span: "", from: "from-moss", to: "to-clay" },
-  { label: "Jalan setapak", span: "", from: "from-forest", to: "to-moss" },
-  { label: "Suasana sore", span: "sm:col-span-2", from: "from-clay", to: "to-moss" },
+  { key: "gallery-1", span: "sm:col-span-2 sm:row-span-2" },
+  { key: "gallery-2", span: "" },
+  { key: "gallery-3", span: "" },
+  { key: "gallery-4", span: "sm:col-span-2" },
+  { key: "gallery-5", span: "" },
+  { key: "gallery-6", span: "" },
+  { key: "gallery-7", span: "sm:col-span-2" },
 ];
 
 export default function GaleriPage() {
@@ -23,17 +24,12 @@ export default function GaleriPage() {
       <PageHero
         eyebrow="Galeri"
         title="Bukti, bukan dekorasi."
-        desc="Foto placeholder untuk sementara. Ganti dengan foto aktual lokasi sebelum tayang: kamar, fasilitas, WP Wong Puncak, dan sekitar Ngebel."
+        desc="Gambar masih placeholder — arahkan kursor untuk melihat prompt fotonya. Ganti lewat /admin atau taruh file di /public/images."
       />
       <div className="container-x py-16">
         <div className="grid auto-rows-[180px] grid-cols-2 gap-4 sm:grid-cols-4">
-          {tiles.map((t, idx) => (
-            <div
-              key={idx}
-              className={`flex items-end rounded-2xl bg-gradient-to-br ${t.from} ${t.to} p-4 ${t.span}`}
-            >
-              <span className="text-sm font-medium text-cream/90">{t.label}</span>
-            </div>
+          {tiles.map((t) => (
+            <Media key={t.key} imageKey={t.key} className={t.span} />
           ))}
         </div>
       </div>

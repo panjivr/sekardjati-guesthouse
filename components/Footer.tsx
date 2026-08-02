@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-moss">Jelajahi</p>
+          <p className="eyebrow text-gold-400">Jelajahi</p>
           <ul className="mt-3 space-y-2 text-sm">
             {nav.map((n) => (
               <li key={n.href}>
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow text-moss">Reservasi</p>
+          <p className="eyebrow text-gold-400">Reservasi</p>
           <p className="mt-3 text-sm leading-relaxed">
             Kirim tanggal dan jumlah tamu. Kami bantu cek kamar yang tersedia
             dan menjelaskan langkah berikutnya.

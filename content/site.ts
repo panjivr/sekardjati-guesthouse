@@ -186,6 +186,44 @@ export const destinations = [
   },
 ];
 
+// ---- Gambar: tinggal isi `src` (mis. "/images/hero.jpg") lalu taruh file di /public/images.
+// `prompt` = deskripsi untuk generate/brief foto. Semua bisa diedit via /admin.
+export type ImageAsset = { alt: string; prompt: string; src?: string };
+
+export const images: Record<string, ImageAsset> = {
+  hero: {
+    alt: "Eksterior Sekar Djati Guest House saat pagi",
+    prompt:
+      "Warm Javanese guest house exterior at soft morning light, plum and gold accents, wooden textures, misty hills of Ngebel in the background, editorial travel photography, natural tones, no people",
+  },
+  "room-kamar-djati": {
+    alt: "Kamar Djati dengan cahaya pagi",
+    prompt:
+      "Cozy double guest room, queen bed with clean linen, morning light through window, warm ivory walls with subtle plum accents, plants, editorial interior photo",
+  },
+  "room-kamar-sekar": {
+    alt: "Kamar Sekar untuk keluarga kecil",
+    prompt:
+      "Spacious family guest room, queen plus single bed, seating area, warm cream tones, wooden furniture, tidy and inviting, editorial interior photo",
+  },
+  "room-kamar-puncak": {
+    alt: "Kamar Puncak dekat WP Wong Puncak",
+    prompt:
+      "Warm compact guest room near a cafe, twin beds, soft peach and gold accents, window with garden view, editorial interior photo",
+  },
+  "wp-1": { alt: "Nasi Goreng Wong Puncak", prompt: "Indonesian home-style fried rice with egg and shredded chicken, rustic plate, warm light, top-down food photography" },
+  "wp-2": { alt: "Ayam Sambal Bawang", prompt: "Fried chicken with garlic chili sambal and fresh vegetables, rustic ceramic plate, warm moody food photography" },
+  "wp-3": { alt: "Kopi Susu Gula Aren", prompt: "Iced palm-sugar milk coffee in a glass, condensation, warm cafe background, food photography" },
+  "wp-4": { alt: "Pisang Goreng", prompt: "Golden fried banana fritters on a plate with grated cheese, cozy warung setting, food photography" },
+  "gallery-1": { alt: "Eksterior pagi", prompt: "Guest house facade in morning mist, plum-gold palette, wide editorial shot" },
+  "gallery-2": { alt: "Interior kamar", prompt: "Warm guest room detail, linen and morning light" },
+  "gallery-3": { alt: "WP Wong Puncak", prompt: "Cozy warung interior with shared table, warm lamps" },
+  "gallery-4": { alt: "Telaga Ngebel", prompt: "Ngebel lake landscape, calm water, hills, soft daylight" },
+  "gallery-5": { alt: "Detail sarapan", prompt: "Local breakfast set with warm tea, rustic table" },
+  "gallery-6": { alt: "Jalan setapak", prompt: "Garden path to the guest house, greenery, stone steps" },
+  "gallery-7": { alt: "Suasana sore", prompt: "Evening ambience, warm lights, plum sky, cozy seating" },
+};
+
 export const faqs = [
   {
     q: "Apakah harus reservasi terlebih dahulu?",

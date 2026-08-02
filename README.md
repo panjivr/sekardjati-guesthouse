@@ -33,6 +33,24 @@ npm run build    # produksi
 
 Nomor WhatsApp aktif: **+62 852-0418-3272**.
 
+## Panel admin tersembunyi (`/admin`)
+
+Buka `https://sekar.djati.web.id/admin` (di-`noindex`, tidak muncul di menu). Sandi default
+`sekar-admin` — ubah lewat env `NEXT_PUBLIC_ADMIN_PASS`. Di sana bisa edit **harga kamar,
+fasilitas, harga menu, dan URL gambar**.
+
+- **Simpan (pratinjau):** perubahan tersimpan di browser itu saja (localStorage) — instan, untuk cek.
+- **Unduh JSON → `content/overrides.json`:** commit file ini agar perubahan tampil untuk **semua**
+  pengunjung setelah deploy. Urutan: default (`content/site.ts`) → `overrides.json` → localStorage.
+
+> Catatan: gate sandi bersifat menyembunyikan, bukan keamanan penuh (situs statis tanpa backend).
+
+## Gambar (tinggal ganti)
+
+Semua gambar masih placeholder gradien + **prompt** (arahkan kursor untuk melihat). Definisi di
+`content/site.ts` (`images`). Untuk memasang foto: taruh file di `public/images/…`, lalu isi `src`
+di `content/site.ts` atau via `/admin`.
+
 ## Deploy
 
 1. Import repo ke **Vercel**.

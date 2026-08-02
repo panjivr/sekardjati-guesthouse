@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { nav, site, waLink } from "@/content/site";
+import { nav, waLink } from "@/content/site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -11,11 +11,11 @@ export default function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-40 border-b border-mist/70 bg-cream/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-gold/25 bg-forest/95 text-cream backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between">
         <Link href="/" className="flex flex-col leading-none">
-          <span className="font-serif text-lg text-forest">Sekar Djati</span>
-          <span className="text-[10px] uppercase tracking-[0.2em] text-moss">
+          <span className="font-serif text-lg text-cream">Sekar Djati</span>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-gold-400">
             Guest House · Ngebel
           </span>
         </Link>
@@ -25,7 +25,7 @@ export default function Header() {
             <Link
               key={n.href}
               href={n.href}
-              className="text-sm text-ink/80 transition hover:text-forest"
+              className="text-sm text-cream/80 transition hover:text-gold-400"
             >
               {n.label}
             </Link>
@@ -37,7 +37,7 @@ export default function Header() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden rounded-md p-2 text-forest"
+          className="lg:hidden rounded-md p-2 text-cream"
           aria-label="Buka menu"
           aria-expanded={open}
         >
@@ -50,24 +50,19 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-mist bg-cream lg:hidden">
+        <div className="border-t border-white/10 bg-forest lg:hidden">
           <nav className="container-x flex flex-col py-4">
             {nav.map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-ink/80"
+                className="py-2.5 text-cream/80"
               >
                 {n.label}
               </Link>
             ))}
-            <a
-              href={cta}
-              target="_blank"
-              rel="noopener"
-              className="btn-primary mt-3"
-            >
+            <a href={cta} target="_blank" rel="noopener" className="btn-primary mt-3">
               WhatsApp Reservasi
             </a>
           </nav>
