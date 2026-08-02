@@ -168,18 +168,21 @@ export const menu: MenuGroup[] = [
 export const destinations = [
   {
     name: "Telaga Ngebel",
+    image: "dest-telaga",
     summary:
       "Danau alam yang menjadi jantung kawasan Ngebel. Udara sejuk, jalan mengelilingi telaga, dan spot menikmati pagi.",
     estimate: "± 10 menit dari Sekar Djati (estimasi, tergantung cuaca & rute)",
   },
   {
     name: "Air Terjun sekitar Ngebel",
+    image: "dest-airterjun",
     summary:
       "Opsi wisata alam yang bisa dipasangkan dengan rute Telaga Ngebel. Akses dan durasi menyesuaikan musim.",
     estimate: "Verifikasi kondisi jalan sebelum berangkat",
   },
   {
     name: "Desa & lanskap ketinggian",
+    image: "dest-desa",
     summary:
       "Pemandangan ketinggian, kopi, dan kuliner lokal. Nikmati dengan pelan dan hormati warga sekitar.",
     estimate: "Rekomendasi rute kami bantu saat menginap",
@@ -222,6 +225,20 @@ export const images: Record<string, ImageAsset> = {
   "gallery-5": { alt: "Detail sarapan", prompt: "Local breakfast set with warm tea, rustic table" },
   "gallery-6": { alt: "Jalan setapak", prompt: "Garden path to the guest house, greenery, stone steps" },
   "gallery-7": { alt: "Suasana sore", prompt: "Evening ambience, warm lights, plum sky, cozy seating" },
+
+  // Bagian "Mengapa Sekar Djati"
+  "why-1": { alt: "Sudut tenang untuk bersantai", prompt: "Quiet corner nook with a chair, warm morning light, ivory and plum tones, minimal calm interior detail, editorial" },
+  "why-2": { alt: "Cerita lokal Ngebel", prompt: "Authentic local detail from Ngebel — hands preparing food or a village path, respectful documentary style, warm natural tones" },
+  "why-3": { alt: "Detail hangat & spesifik", prompt: "Close-up hospitality detail: folded linen, warm cup, room key on wood, soft gold light, editorial still life" },
+
+  // Destinasi
+  "dest-telaga": { alt: "Telaga Ngebel", prompt: "Ngebel lake at soft daylight, calm water reflecting hills, misty atmosphere, wide travel landscape, natural colors" },
+  "dest-airterjun": { alt: "Air terjun sekitar Ngebel", prompt: "Forest waterfall near Ngebel, lush greenery, flowing water, moody natural light, travel landscape photography" },
+  "dest-desa": { alt: "Desa & lanskap ketinggian", prompt: "Highland village landscape around Ngebel, terraced greenery, coffee plants, warm afternoon light, editorial travel photo" },
+
+  // WP Wong Puncak & Tentang
+  "wp-hero": { alt: "Suasana WP Wong Puncak", prompt: "Cozy warung interior with shared wooden tables, warm hanging lamps, plum and gold accents, welcoming casual dining, editorial photo, no logos" },
+  "about-1": { alt: "Cerita Sekar Djati", prompt: "Warm portrait of the guest house atmosphere — a doorway, plants, and morning light, ivory-plum palette, calm editorial travel photography, no people faces" },
 };
 
 export const faqs = [

@@ -79,12 +79,13 @@ export default function Home() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
-            ["Calm before clever", "Kejelasan dan rasa tenang mengalahkan efek visual yang ramai."],
-            ["Local, not folkloric", "Ngebel diceritakan dengan hormat, konkret, tanpa dekorasi kosong."],
-            ["Warmly specific", "Detail yang membantu: kapasitas, jam makan, akses, dan apa yang dibawa."],
-          ].map(([t, d]) => (
+            ["why-1", "Calm before clever", "Kejelasan dan rasa tenang mengalahkan efek visual yang ramai."],
+            ["why-2", "Local, not folkloric", "Ngebel diceritakan dengan hormat, konkret, tanpa dekorasi kosong."],
+            ["why-3", "Warmly specific", "Detail yang membantu: kapasitas, jam makan, akses, dan apa yang dibawa."],
+          ].map(([k, t, d]) => (
             <div key={t} className="card">
-              <h3 className="text-xl text-forest">{t}</h3>
+              <Media imageKey={k} className="aspect-[16/10]" rounded="rounded-xl" />
+              <h3 className="mt-5 text-xl text-forest">{t}</h3>
               <p className="mt-3 text-ink/70">{d}</p>
             </div>
           ))}
@@ -144,7 +145,8 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {destinations.map((d) => (
               <div key={d.name} className="card">
-                <h3 className="text-xl text-forest">{d.name}</h3>
+                <Media imageKey={d.image} className="aspect-[16/10]" rounded="rounded-xl" />
+                <h3 className="mt-5 text-xl text-forest">{d.name}</h3>
                 <p className="mt-3 text-sm text-ink/70">{d.summary}</p>
                 <p className="mt-4 text-xs text-moss">{d.estimate}</p>
               </div>

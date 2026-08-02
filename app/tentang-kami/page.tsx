@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import Media from "@/components/Media";
 
 export const metadata: Metadata = {
   title: "Tentang Kami",
@@ -21,6 +22,7 @@ export default function TentangPage() {
     <>
       <PageHero eyebrow="Tentang Kami" title="Dekat dengan alam, makanan, dan cara hidup setempat." />
       <section className="container-x py-16">
+        <Media imageKey="about-1" className="mb-10 aspect-[21/9] w-full" rounded="rounded-3xl" />
         <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-ink/75">
           <p>
             Sekar Djati tumbuh dari keinginan untuk menyediakan tempat menginap

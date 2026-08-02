@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import Media from "@/components/Media";
 import { destinations } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -29,7 +30,8 @@ export default function PanduanPage() {
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {destinations.map((d) => (
             <div key={d.name} className="card">
-              <h3 className="text-xl text-forest">{d.name}</h3>
+              <Media imageKey={d.image} className="aspect-[16/10]" rounded="rounded-xl" />
+              <h3 className="mt-5 text-xl text-forest">{d.name}</h3>
               <p className="mt-3 text-sm text-ink/70">{d.summary}</p>
               <p className="mt-4 text-xs text-moss">{d.estimate}</p>
             </div>
